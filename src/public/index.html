@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to DOCX Converter - Convierte tus PDFs a Word</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📄 PDF to DOCX Converter</h1>
+                <p>Convierte tus archivos PDF a Word de forma rápida y segura</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <h2>Sube tu archivo PDF</h2>
+                    <p>Arrastra y suelta tu PDF aquí o haz clic para seleccionar</p>
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                </div>
+                <button class="select-file-btn" id="selectFileBtn">Seleccionar archivo</button>
+            </section>
+
+            <!-- File Info Section -->
+            <section class="file-info-section" id="fileInfoSection" style="display: none;">
+                <div class="file-info">
+                    <div class="file-icon">📄</div>
+                    <div class="file-details">
+                        <p class="file-name" id="fileName"></p>
+                        <p class="file-size" id="fileSize"></p>
+                    </div>
+                    <button class="remove-btn" id="removeFileBtn">✕</button>
+                </div>
+            </section>
+
+            <!-- Conversion Options -->
+            <section class="options-section" id="optionsSection" style="display: none;">
+                <div class="option-group">
+                    <label>Modo de conversión:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="mode" value="auto" checked>
+                            <span>Automático (Recomendado)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="mode" value="basic">
+                            <span>Básico (Rápido)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="mode" value="advanced">
+                            <span>Avanzado (Precisión)</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Convert Button -->
+            <section class="action-section" id="actionSection" style="display: none;">
+                <button class="convert-btn" id="convertBtn">
+                    <span class="btn-text">Convertir a DOCX</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-info">
+                    <p id="progressText">Preparando conversión...</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-percent" id="progressPercent">0%</p>
+            </section>
+
+            <!-- Result Section -->
+            <section class="result-section" id="resultSection" style="display: none;">
+                <div class="result-success">
+                    <div class="result-icon">✅</div>
+                    <h2>¡Conversión completada!</h2>
+                    <p id="resultMessage"></p>
+                    <div class="result-details" id="resultDetails"></div>
+                    <button class="download-btn" id="downloadBtn">
+                        <span>⬇️ Descargar DOCX</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-content">
+                    <div class="error-icon">❌</div>
+                    <h2>Error en la conversión</h2>
+                    <p id="errorMessage"></p>
+                    <button class="retry-btn" id="retryBtn">Intentar de nuevo</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <h2>¿Por qué usar nuestro conversor?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Rápido</h3>
+                    <p>Conversión instantánea sin esperas</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seguro</h3>
+                    <p>Tus archivos se procesan localmente</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Precisión</h3>
+                    <p>Formato y estructura preservados</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Gratis</h3>
+                    <p>Sin límites de conversiones</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 PDF to DOCX Converter. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
