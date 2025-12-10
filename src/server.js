@@ -283,7 +283,7 @@ app.use((err, req, res, next) => {
 const PORT = config.port;
 app.listen(PORT, () => {
   console.log('\n' + '='.repeat(70));
-  console.log('🚀 SERVIDOR PDF TO DOCX CONVERTER');
+  console.log('🚀 SERVIDOR PDF TO DOCX CONVERTERR');
   console.log('='.repeat(70));
   console.log(`📡 Servidor ejecutándose en http://localhost:${PORT}`);
   console.log(`📋 Modo de conversión: ${config.conversionMode.toUpperCase()}`);
